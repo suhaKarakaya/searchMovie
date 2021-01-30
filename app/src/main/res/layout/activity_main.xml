@@ -25,7 +25,8 @@
         android:textSize="13sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:onClick="clearText"/>
 
     <Button
         android:id="@+id/btn_search"
@@ -38,7 +39,8 @@
         android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="@+id/edtText_search"
         app:layout_constraintStart_toStartOf="@+id/edtText_search"
-        app:layout_constraintTop_toBottomOf="@+id/edtText_search" />
+        app:layout_constraintTop_toBottomOf="@+id/edtText_search"
+        android:onClick="searchMovie"/>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_movieList"

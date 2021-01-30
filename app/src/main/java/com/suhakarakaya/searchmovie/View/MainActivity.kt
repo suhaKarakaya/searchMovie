@@ -22,9 +22,11 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         viewModel = ViewModelProviders.of(this).get(MovieViewModel::class.java)
-        btn_search.setOnClickListener {
-            viewModel.getDataFromApi(edtText_search.text.toString())
-        }
+
+
+
+
+
 
 
 
@@ -74,5 +76,17 @@ class MainActivity : AppCompatActivity() {
                 }
             }
         })
+    }
+
+    fun clearText(view: View) {
+
+        edtText_search.setText("")
+
+    }
+
+    fun searchMovie(view: View) {
+
+        viewModel.getDataFromApi(edtText_search.text.toString())
+
     }
 }
